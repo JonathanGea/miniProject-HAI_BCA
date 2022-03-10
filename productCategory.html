@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Product Category</title>
+    <title>Produk Category list</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/style/style.css">
@@ -36,57 +36,52 @@
                             <button type="button" class="btn btn-info"> Product</button>
                         </a>
                         <!-- Button to Open Product Category page-->
-                        <a class="btn" href="productCategory.html">
+                        <a class="btn" href="productCategory.html"> 
                             <button type="button" class="btn btn-info"> Product Category</button>
-                        </a>
+                        </a>  
                         <!-- Button to Open User Page-->
                         <a class="btn" href="user.html">
                             <button type="button" class="btn btn-info"> User</button>
                         </a>
                         <!-- Button to Open User Page-->
                         <a class="btn" href="#">
-                            <button type="button" class="btn btn-info"> Logout</button>
+                            <button type="button"  class="btn btn-info"> Logout</button>
                         </a>
-
                     </div>
                 </div>
                 <div class="col-sm-8">
                     <div class="container mt-3">
-                        <h2>Produk list</h2>
+                        <h2>Produk Category list</h2>
                         <!-- ini diisi table start-->
                         <table class="table table-hover">
                             <thead>
                                 <tr>
                                     <th>No : </th>
-                                    <th>Product Name</th>
-                                    <th>Product No</th>
                                     <th>Category</th>
-                                    <th>Stock</th>
+                                    <th>Description</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Meja Kantor</td>
-                                    <td>112233</td>
-                                    <td>Furniture</td>
-                                    <td>10</td>
+                                    <td>Peralatan Kantor</td>
+                                    <td>Description here.....</td>
                                     <td>
                                         <button type="button" class="btn btn-success">View</button>
                                         <!-- Modal edit -->
-                                        <!-- Button to Open the Modal -->
+                                        <!-- Button to Open the Modal  Product Category-->
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                            data-bs-target="#modalEdit">
+                                            data-bs-target="#modalProductCategory">
                                             Edit
                                         </button>
-                                        <!-- The Modal -->
-                                        <div class="modal" id="modalEdit">
+                                        <!-- The Modal Product Category -->
+                                        <div class="modal" id="modalProductCategory">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
                                                     <!-- Modal Header -->
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">From Edit Product</h4>
+                                                        <h4 class="modal-title">Form Add Product Category</h4>
                                                         <button type="button" class="btn-close"
                                                             data-bs-dismiss="modal"></button>
                                                     </div>
@@ -94,35 +89,18 @@
                                                     <div class="modal-body">
                                                         <form action="/action_page.php">
                                                             <div class="mb-3 mt-3">
-                                                                <label for="ProductName" class="ProductName">ProductName
-                                                                    :</label>
+                                                                <label for="ProductName" class="ProductName">Product
+                                                                    Name :</label>
                                                                 <input type="text" class="form-control" id="ProductName"
                                                                     placeholder="Product Name" name="ProductName">
                                                             </div>
                                                             <div class="mb-3 mt-3">
-                                                                <label for="ProductNo" class="ProductNo">Product No
-                                                                    :</label>
-                                                                <input type="text" class="form-control" id="ProductNo"
-                                                                    placeholder="Product No" name="ProductNo">
+                                                                <label for="comment">Comments:</label>
+                                                                <textarea class="form-control" rows="5" id="comment"
+                                                                    name="text"></textarea>
                                                             </div>
-                                                            <div class="mb-3 mt-3">
-                                                                <label for="ProductNo" class="ProductNo">Category
-                                                                    :</label>
-                                                                <select class="form-select form-select-mb-3"
-                                                                    aria-label=".form-select-sm example">
-                                                                    <option selected>Select Category </option>
-                                                                    <option value="1">Electronik</option>
-                                                                    <option value="2">Peralatan Dapur</option>
-                                                                    <option value="3">Furniture</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="mb-3 mt-3">
-                                                                <label for="stock" class="stock">Stock :</label>
-                                                                <input type="number" class="form-control" id="stock"
-                                                                    placeholder="stock" name="stock">
-                                                            </div>
-                                                            <button type="Update"
-                                                                class="btn btn-primary">Update</button>
+                                                            <button type="submit"
+                                                                class="btn btn-primary">Submit</button>
                                                         </form>
                                                     </div>
                                                     <!-- Modal footer -->
@@ -130,11 +108,13 @@
                                                         <button type="button" class="btn btn-danger"
                                                             data-bs-dismiss="modal">Close</button>
                                                     </div>
+
                                                 </div>
                                             </div>
                                         </div>
                                         <button type="button" class="btn btn-danger">Hapus</button>
                                     </td>
+
                                 </tr>
                             </tbody>
                         </table>
@@ -163,9 +143,6 @@
             </div>
 
         </div>
-
-
-
 </body>
 
 </html>
